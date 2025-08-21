@@ -1,0 +1,23 @@
+h1{
+    color:indigo ;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    text-align: center;
+
+}
+
+img{
+   width: 600px; 
+  height: auto; 
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+em{
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color: blueviolet;
+}
+
+
