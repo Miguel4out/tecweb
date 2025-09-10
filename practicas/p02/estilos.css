@@ -15,9 +15,13 @@ img{
 }
 
 em{
+    color: indigo;
     font-weight: bolder;
-    text-decoration: underline;
-    text-decoration-color: blueviolet;
 }
 
+
+body{
+    margin: 0 15%;
+    font-family: sans-serif;
+}
 
