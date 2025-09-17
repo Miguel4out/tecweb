@@ -14,47 +14,68 @@
 
     <h1>Registro al Concurso &ldquo;Chidos mis Tenis&rdquo;</h1>
 <form action="http://52.43.117.247/neo/classroom/tw/concurso.php" method="post">
+ 
     <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#174;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puedes ser uno de los diez afortunados ganadores.</p>
-
-    <p>Información del Participante</p>
-
-    <ul>
-    <li>Nombre: <input type="text" name="name"></li>
-    <li>Dirección de E-mail: <input type="email" name="email"></li>
-    <li>Número Telefónico: <input type="number" name="phone"></li>
-    <li>Mis tenis son tan feos porque... <br>
-      <textarea name="story" rows="4" cols="60" maxlength=300 
-        placeholder="No más de 300 caracteres de longitud">
-      </textarea></li>
-    </ul>
-
+    <fieldset>
+      <lengend> Información del participante</lengend>>
+        <ul>
+          <li>Nombre: <input type="text" name="name"></li>
+          <li>Dirección de E-mail: <input type="email" name="email"></li>
+          <li>Número Telefónico: <input type="number" name="phone"></li>
+          <li>Mis tenis son tan feos porque... <br>
+            <textarea name="story" rows="4" cols="60" maxlength=300 
+              placeholder="No más de 300 caracteres de longitud">
+            </textarea>
+          </li>
+        </ul>
+    </fieldset>
     <h2>Diseña tus Mike personalizados:</h2>
 
-    <p>Diseño personalizado del Tenis</p>
+    <fieldset><legend>Diseño personalizado del Tenis</legend>
+      <fieldset>
+        <legend>color (escoge uno)</legend> 
+          <ul>
+            <li><input type="radio" name="color" value="red"> Rojo</li>
+            <li><input type="radio" name="color" value="blue"> Azul</li>
+            <li><input type="radio" name="color" value="black"> Negro</li>
+            <li><input type="radio" name="color" value="silver"> Plateado</li>
+          </ul>
+      </fieldset>
 
-    <p>Color <em>(escoge uno)</em>:</p>
-      <ul>
-      <li>Rojo</li>
-      <li>Azul</li>
-      <li>Negro</li>
-      <li>Plateado</li>
-      </ul>
-
-    <p>Características <em>(escoge tantas como quieras)</em>:</p>
-      <ul>
-      <li>Cordones brillantes</li>
-      <li>Logo metálico</li>
-      <li>Suela luminosa</li>
-      <li>WiFi integrado</li>
-      </ul>
-
-    <p>Talla</p>
-    <p>Las medidas reflejan el estándar masculino:</p>
-
-    <p>
-      <input type="submit">
-      <input type="reset">
-    </p>
+      <fieldset>
+        <legend>Características <em>(escoge tantas como quieras)</em></legend>
+        <ul>
+          <li><input type="checkbox" name="features[]" value="sparkles"> Brillantes</li>
+          <li><input type="checkbox" name="features[]" value="silver">Logo metálico</li>
+          <li><input type="checkbox" name="features[]" value="shinning">Suela luminosa</li>
+          <li><input type="checkbox" name="features[]" value="wifi">WiFi integrado</li>
+        </ul>
+      </fieldset>
+        
+      <fieldset>
+        <legend>Talla</legend>
+        <p>Las medidas reflejan el estándar masculino:
+          <select name="size"> 
+            <option>3 US</option>
+            <option>4 US</option>
+            <option>5 US</option>
+            <option>6 US</option>
+            <option>7 US</option>
+            <option>8 US</option>
+            <option>9 US</option>
+            <option>10 US</option>
+            <option>11 US</option>
+          </select>
+       </p>
+      </fieldset>
+      
+      </fieldset>
+      
+      <p>
+        <input type="submit" value="¡QUE CHIDOS MIS TENIS!">
+        <input type="reset" value="Restablecer">
+      </p>
     </form>
+    
   </body>
 </html>
