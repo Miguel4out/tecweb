@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #005ea6;
+        }
+    </style>
+
+<body>
+    <h2>Registro de Producto</h2>
+
+    <?php if (!empty($mensaje)): ?>
+        <div class="mensaje <?php echo (str_contains($mensaje, '✅')) ? 'exito' : 'error'; ?>">
+            <?php echo $mensaje; ?>
+        </div>
+    <?php endif; ?>
+
+    <form method="POST" action="set_producto_v2.php">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" required>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" required>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" min="0" required>
+
+        <label for="detalles">Detalles:</label>
+        <textarea id="detalles" name="detalles" rows="4" required></textarea>
+
+        <label for="unidades">Unidades:</label>
+        <input type="number" id="unidades" name="unidades" min="0" required>
+
+        <label for="imagen">Ruta de la imagen (ej: img/applewatch.jpg):</label>
+        <input type="text" id="imagen" name="imagen" required>
+
+        <button type="submit">Guardar Producto</button>
+    </form>
+</body>
+</html>
